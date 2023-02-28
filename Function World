@@ -1,0 +1,49 @@
+--Level 1:
+exact h(p),
+--Level 2:
+intro n,
+exact n,
+--Level 3:
+have q := h(p),
+have t := j(q),
+have u:U :=l(t),
+exact u,
+--Level 4:
+have q := h(p),
+have t := j(q),
+have u:U :=l(t),
+exact u,
+--Level 5:
+intros p q,
+exact p,
+--Level 6:
+intro f,
+intro h,
+intro p,
+have j : Q → R := f(p),
+apply f,
+exact p,
+exact h p,
+--Level 7:
+intro f,
+intro g,
+intro h,
+--apply g,
+--apply f,
+--exact h,
+have j := g(f(h)),
+exact j,
+--Level 8:
+intros f h p,
+apply h,
+exact f p,
+--Level 9:
+intro a,
+apply f15,
+apply f11,
+apply f9,
+apply f8,
+apply f5,
+apply f2,
+apply f1,
+exact a,
