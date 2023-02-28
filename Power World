@@ -1,0 +1,57 @@
+--Level 1:
+rwa pow_zero,
+--Level 2:
+induction m with h hh,
+rw pow_succ,
+simp,
+rw pow_succ,
+rwa mul_zero,
+
+--Level 3:
+rw one_eq_succ_zero,
+rw pow_succ,
+rw pow_zero,
+simp,
+--Level 4:
+induction m with h hh,
+rwa pow_zero,
+rw pow_succ,
+rw mul_one,
+rwa hh,
+
+--Level 5:
+induction m with d hd,
+simp,
+rw pow_zero,
+rwa mul_one,
+rw succ_add,
+rw pow_succ,
+rw hd,
+rw pow_succ,
+simp,
+
+--Level 6:
+induction n with d hd,
+repeat {rw pow_zero},
+rwa mul_one,
+repeat {rw pow_succ},
+rw hd,
+simp,
+
+--Level 7:
+induction n with d hd,
+rw pow_zero,
+rw mul_zero,
+rwa pow_zero,
+rw pow_succ,
+rw hd,
+rw mul_succ,
+rw pow_add,
+simp,
+
+--Level 8:
+rw two_eq_succ_one,
+rw one_eq_succ_zero,
+repeat {rw pow_succ},
+repeat {rw pow_zero},
+ring,
