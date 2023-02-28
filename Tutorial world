@@ -1,0 +1,12 @@
+--Level 1:
+refl,
+
+--Level 2:
+rwa h,
+
+--Level 3: 
+rwa h,
+
+--Level 4: 
+rw add_succ,
+rwa add_zero,
