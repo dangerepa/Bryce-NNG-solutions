@@ -1,0 +1,36 @@
+--Level 1:
+induction n with d hd,
+rwa add_zero,
+rw add_succ,
+rwa hd,
+
+--Level 2:
+induction c with d hd,
+repeat{rw add_zero},
+repeat{rw add_succ},
+rwa hd,
+
+--Level 3:
+induction b with d hd,
+repeat{rw add_zero},
+rw add_succ,
+rw add_succ,
+rwa hd,
+
+--Level 4:
+induction b with d hd,
+rw add_zero,
+rwa zero_add,
+rw add_succ,
+rw succ_add,
+rwa hd,
+
+--Level 5:
+rw one_eq_succ_zero,
+rw add_succ,
+rwa add_zero,
+
+--Level 6: 
+rw add_assoc,
+rw add_comm b,
+rwa add_assoc,
