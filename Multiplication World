@@ -1,0 +1,66 @@
+--Level 1:
+induction m with k hk,
+rwa mul_zero,
+--Level 2:
+rw one_eq_succ_zero,
+rw mul_succ,
+rw mul_zero,
+rwa zero_add,
+--Level 3:
+induction m with h hh,
+rwa mul_zero,
+rw mul_succ,
+rw hh,
+rw one_eq_succ_zero,
+rw add_succ,
+rwa add_zero,
+--Level 4:
+induction a with h hh,
+rw mul_zero,
+repeat {rw zero_add},
+rw succ_add,
+rw mul_succ,
+rw hh,
+rw mul_succ,
+simp,
+
+--Level 5:
+induction c with h hh,
+repeat {rw mul_zero},
+repeat {rw mul_succ},
+rw mul_add,
+rwa hh,
+
+--Level 6:
+induction b with h hh,
+repeat {rw mul_zero},
+rwa zero_add,
+rw mul_succ,
+rw hh,
+rw mul_succ,
+rw add_succ,
+rw add_succ,
+rw add_assoc (a*h) a h,
+rw add_comm a h,
+rwa ← add_assoc,
+
+--Level 7:
+induction t with d hd,
+repeat {rw mul_zero},
+rwa add_zero,
+repeat{rw mul_succ},
+rw hd,
+simp,
+
+--Level 8:
+induction b with d hd,
+rw mul_zero,
+rwa zero_mul,
+rw mul_succ,
+rw succ_mul,
+rwa hd,
+
+--Level 9:
+rw ← mul_assoc,
+rw mul_comm a b,
+rwa mul_assoc b a c,
